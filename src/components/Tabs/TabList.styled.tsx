@@ -13,6 +13,13 @@ export const TabStyled = styled.div`
   width: 100%;
   max-height: 100px;
   height: 100%;
+
+  @media screen and (max-width: 820px) {
+    flex-wrap: wrap;
+    align-items: flex-start;
+    max-height: 100%;
+    flex: 0;
+  }
 `;
 
 export const IndependentTabStyled = styled(Link)<IndependentTabProps>`
@@ -28,5 +35,19 @@ export const IndependentTabStyled = styled(Link)<IndependentTabProps>`
     color: white;
     /* border-bottom-right-radius: 10px; */
     border-top-right-radius: 10px;
+  }
+
+  @media screen and (max-width: 1000px) {
+    font-size: 40px;
+  }
+
+  @media screen and (max-width: 820px) {
+    padding: 10px;
+    font-size: 30px;
+  }
+
+  @media screen and (max-width: 660px) {
+    padding: 10px;
+    font-size: 15px;
   }
 `;
