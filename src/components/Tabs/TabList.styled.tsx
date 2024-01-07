@@ -6,19 +6,30 @@ interface IndependentTabProps {
   active?: string;
 }
 
+export const ResponsiveTabStyled = styled.div`
+  width: 76%;
+  height: 100%;
+  overflow: hidden;
+  transition: width 0.5s ease;
+  background-color: white;
+  position: absolute;
+  right: 0;
+  display: none;
+  transition: 0.3s all;
+  @media screen and (max-width: 768px) {
+    display: block;
+  }
+`;
+
 export const TabStyled = styled.div`
   display: flex;
-  justify-content: space-evenly;
   align-items: center;
   width: 100%;
   max-height: 100px;
   height: 100%;
-
-  @media screen and (max-width: 820px) {
-    flex-wrap: wrap;
-    align-items: flex-start;
-    max-height: 100%;
-    flex: 0;
+  position: relative;
+  &:hover ${ResponsiveTabStyled} {
+    display: none;
   }
 `;
 
@@ -30,24 +41,22 @@ export const IndependentTabStyled = styled(Link)<IndependentTabProps>`
   flex: 1;
   text-align: center;
   transition: 0.3s all;
+  width: 100%;
   &:hover {
     background-color: rgba(40, 104, 241, 0.571);
     color: white;
-    /* border-bottom-right-radius: 10px; */
     border-top-right-radius: 10px;
   }
 
   @media screen and (max-width: 1000px) {
-    font-size: 40px;
-  }
-
-  @media screen and (max-width: 820px) {
-    padding: 10px;
     font-size: 30px;
   }
+  @media screen and (max-width: 768px) {
+    display: inline-block;
+  }
 
-  @media screen and (max-width: 660px) {
-    padding: 10px;
-    font-size: 15px;
+  @media screen and (max-width: 425px) {
+    font-size: 18px;
+    padding: 20px 5px;
   }
 `;
