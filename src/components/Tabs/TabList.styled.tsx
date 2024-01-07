@@ -55,7 +55,7 @@ export const IndependentTabStyled = styled(Link)<IndependentTabProps>`
     display: inline-block;
   }
 
-  @media screen and (max-width: 425px) {
+  @media screen and (max-width: 650px) {
     font-size: 18px;
     padding: 20px 5px;
   }
