@@ -8,4 +8,8 @@ export const MainCardStyled = styled.div`
   box-shadow: 0 2px 8px rgb(40, 105, 241);
   border-radius: 10px;
   padding: 10px;
+
+  @media screen and (max-width: 800px) {
+    box-shadow: none;
+  }
 `;
