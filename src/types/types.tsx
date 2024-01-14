@@ -14,3 +14,7 @@ export type TabListProps = {
 export type WrapperProps = {
   children: ReactNode;
 };
+
+export type AboutMeProps = {
+  text: string;
+};

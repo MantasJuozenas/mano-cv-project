@@ -1,27 +1,31 @@
 import { StrictMode } from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App.tsx';
 import './index.css';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { StyledWrapper } from './components/Wrapper/Wrapper.styled.tsx';
 import { GlobalStyle } from './components/SharedStyles.styled.tsx';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { ProfilePage } from './pages/ProfilePage.tsx';
+import { ExperiencePage } from './pages/ExperiencePage.tsx';
+import { SkillsPage } from './pages/SkillsPage.tsx';
+import { EducationPage } from './pages/EducationPage.tsx';
+import App from './App.tsx';
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <App />,
+    element: <ProfilePage text="Profile" />,
   },
   {
     path: '/experience',
-    element: <App />,
+    element: <ExperiencePage />,
   },
   {
-    path: '/aboutme',
-    element: <App />,
+    path: '/skills',
+    element: <SkillsPage />,
   },
   {
     path: '/education',
-    element: <App />,
+    element: <EducationPage />,
   },
 ]);
 
@@ -29,7 +33,9 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <StyledWrapper>
       <GlobalStyle />
-      <RouterProvider router={router} />
+      <App>
+        <RouterProvider router={router} />
+      </App>
     </StyledWrapper>
   </StrictMode>
 );
