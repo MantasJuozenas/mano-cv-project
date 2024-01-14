@@ -34,11 +34,16 @@ export const TabStyled = styled.div`
 `;
 
 export const IndependentTabStyled = styled(Link)<IndependentTabProps>`
-  border-right: ${(props) => (props.last === 'true' ? 'none' : '1px solid rgb(40, 105, 241)')};
-  border-bottom: ${(props) => (props.active === 'true' ? 'none' : '1px solid rgb(40, 105, 241)')};
+  border-right: ${(props) =>
+    props.last === 'true' ? 'none' : '1px solid rgb(40, 105, 241)'};
+  border-bottom: ${(props) =>
+    props.active === 'true'
+      ? '1px solid white'
+      : '1px solid rgb(40, 105, 241)'};
   font-size: 50px;
   padding: 20px 10px;
   flex: 1;
+  color: rgb(40, 105, 241);
   text-align: center;
   transition: 0.3s all;
   width: 100%;
