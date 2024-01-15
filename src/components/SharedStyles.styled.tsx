@@ -8,6 +8,6 @@ export const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
         text-decoration: none;
         list-style: none;
-        font-family: 'Barlow', sans-serif;
+        font-family: 'Inter', sans-serif;
     }
 `;
